@@ -59,6 +59,7 @@ The Skimmer accesses CMS 2012 open data and selects events with at least two opp
 10. Run on other datasets as needed. To run on a single dataset .root file which is known to contain a Higgs event, run on `muoneventsskimmer_cfg_data_with_Higgs_event.py`.
 #### Run using CRAB3
 (running jobs on CRAB requires a valid CMS grid proxy and a T2 storage account)
+
 9. Open each of the `crabconfig_*.py` files in the `crab` directory and replace:
     * The path in the line `datasetdir = '...'` with the absolute path of the LXPLUS directory where the datasets are located.
     * The path in `config.JobType.psetName = '...'` with the correct path of the CMSSW configuration file.
@@ -66,7 +67,7 @@ The Skimmer accesses CMS 2012 open data and selects events with at least two opp
 10. Initiate CRAB environment and grid proxy using:
     ```shell
     source /cvmfs/cms.cern.ch/crab3/crab.sh
-    voms-proxy-init --voms cms --valid 168:00
+    voms-proxy-init --voms cms --valid 192:00
     ```
 11. Submit CRAB jobs for data using:
     ```shell
